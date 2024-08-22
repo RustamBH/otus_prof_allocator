@@ -3,17 +3,17 @@ cmake_minimum_required(VERSION 3.5)
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
-project(06.allocator VERSION ${PROJECT_VESRION})
+project(allocator VERSION ${PROJECT_VESRION})
 
 add_executable(
-	allocator	
+	Allocator	
 	main.cpp
 	logging_allocator.h
 	MyContainer.h
 	pretty.h
 )
 
-set_target_properties(allocator PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
+set_target_properties(Allocator PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
 
 install(TARGETS allocator RUNTIME DESTINATION bin)
 
